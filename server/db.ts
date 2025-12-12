@@ -1,6 +1,6 @@
-import { eq } from "drizzle-orm";
+import { asc, eq } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users } from "../drizzle/schema";
+import { InsertUser, users, events, bulletComments, statistics } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -89,4 +89,43 @@ export async function getUserByOpenId(openId: string) {
   return result.length > 0 ? result[0] : undefined;
 }
 
-// TODO: add feature queries here as your schema grows.
+// Event queries
+export async function getEventsByYear(year: number) {
+  const db = await getDb();
+  if (!db) return [];
+  return db.select().from(events).where(eq(events.year, year));
+}
+
+export async function getAllEvents() {
+  const db = await getDb();
+  if (!db) return [];
+  return db.select().from(events).orderBy(asc(events.date));
+}
+
+export async function getEventById(id: number) {
+  const db = await getDb();
+  if (!db) return undefined;
+  const result = await db.select().from(events).where(eq(events.id, id)).limit(1);
+  return result.length > 0 ? result[0] : undefined;
+}
+
+// Bullet comment queries
+export async function getBulletCommentsByEvent(eventId: number) {
+  const db = await getDb();
+  if (!db) return [];
+  return db.select().from(bulletComments).where(eq(bulletComments.eventId, eventId));
+}
+
+// Statistics queries
+export async function getStatisticsByYear(year: number) {
+  const db = await getDb();
+  if (!db) return undefined;
+  const result = await db.select().from(statistics).where(eq(statistics.year, year)).limit(1);
+  return result.length > 0 ? result[0] : undefined;
+}
+
+export async function getAllStatistics() {
+  const db = await getDb();
+  if (!db) return [];
+  return db.select().from(statistics).orderBy(asc(statistics.year));
+}

@@ -43,74 +43,92 @@
 }
 
 :root {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-600);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
+  /* Russian Orthodox Gold */
+  --color-orthodox-gold: #D4AF37;
+  
+  /* Kremlin Red Palette */
+  --color-kremlin-red: #8B0000;
+  --color-kremlin-red-light: #A52A2A;
+  --color-kremlin-red-dark: #660000;
+  
+  /* Russian Flag Colors */
+  --color-flag-white: #FFFFFF;
+  --color-flag-blue: #0039A6;
+  --color-flag-red: #D52B1E;
+  
+  /* Primary colors - Kremlin Red */
+  --primary: #8B0000;
+  --primary-foreground: #FFFFFF;
+  --sidebar-primary: #A52A2A;
+  --sidebar-primary-foreground: #FFFFFF;
+  
+  /* Chart colors - Russian themed */
+  --chart-1: #D4AF37;
+  --chart-2: #0039A6;
+  --chart-3: #D52B1E;
+  --chart-4: #8B0000;
+  --chart-5: #660000;
+  
   --radius: 0.65rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.235 0.015 65);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.235 0.015 65);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.98 0.001 286.375);
-  --secondary-foreground: oklch(0.4 0.015 65);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.141 0.005 285.823);
-  --destructive: oklch(0.577 0.245 27.325);
+  --background: oklch(0.08 0 0);
+  --foreground: oklch(0.95 0 0);
+  --card: oklch(0.12 0 0);
+  --card-foreground: oklch(0.95 0 0);
+  --popover: oklch(0.12 0 0);
+  --popover-foreground: oklch(0.95 0 0);
+  --secondary: #0039A6;
+  --secondary-foreground: #FFFFFF;
+  --muted: oklch(0.35 0 0);
+  --muted-foreground: oklch(0.65 0 0);
+  --accent: #D4AF37;
+  --accent-foreground: #0F0F0F;
+  --destructive: #D52B1E;
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.623 0.214 259.815);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.235 0.015 65);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.623 0.214 259.815);
+  --border: oklch(0.2 0 0);
+  --input: oklch(0.15 0 0);
+  --ring: #D4AF37;
+  --sidebar: oklch(0.12 0 0);
+  --sidebar-foreground: oklch(0.95 0 0);
+  --sidebar-accent: #D4AF37;
+  --sidebar-accent-foreground: #0F0F0F;
+  --sidebar-border: oklch(0.2 0 0);
+  --sidebar-ring: #D4AF37;
 }
 
 .dark {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-500);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --background: oklch(0.141 0.005 285.823);
-  --foreground: oklch(0.85 0.005 65);
-  --card: oklch(0.21 0.006 285.885);
-  --card-foreground: oklch(0.85 0.005 65);
-  --popover: oklch(0.21 0.006 285.885);
-  --popover-foreground: oklch(0.85 0.005 65);
-  --secondary: oklch(0.24 0.006 286.033);
-  --secondary-foreground: oklch(0.7 0.005 65);
-  --muted: oklch(0.274 0.006 286.033);
-  --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
-  --accent-foreground:  oklch(0.92 0.005 65);
-  --destructive: oklch(0.704 0.191 22.216);
+  /* Dark mode uses same Russian theme */
+  --primary: #8B0000;
+  --primary-foreground: #FFFFFF;
+  --sidebar-primary: #A52A2A;
+  --sidebar-primary-foreground: #FFFFFF;
+  --background: oklch(0.08 0 0);
+  --foreground: oklch(0.95 0 0);
+  --card: oklch(0.12 0 0);
+  --card-foreground: oklch(0.95 0 0);
+  --popover: oklch(0.12 0 0);
+  --popover-foreground: oklch(0.95 0 0);
+  --secondary: #0039A6;
+  --secondary-foreground: #FFFFFF;
+  --muted: oklch(0.35 0 0);
+  --muted-foreground: oklch(0.65 0 0);
+  --accent: #D4AF37;
+  --accent-foreground: #0F0F0F;
+  --destructive: #D52B1E;
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.488 0.243 264.376);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --sidebar: oklch(0.21 0.006 285.885);
-  --sidebar-foreground: oklch(0.85 0.005 65);
-  --sidebar-accent: oklch(0.274 0.006 286.033);
-  --sidebar-accent-foreground:  oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.488 0.243 264.376);
+  --border: oklch(0.2 0 0);
+  --input: oklch(0.15 0 0);
+  --ring: #D4AF37;
+  --chart-1: #D4AF37;
+  --chart-2: #0039A6;
+  --chart-3: #D52B1E;
+  --chart-4: #8B0000;
+  --chart-5: #660000;
+  --sidebar: oklch(0.12 0 0);
+  --sidebar-foreground: oklch(0.95 0 0);
+  --sidebar-accent: #D4AF37;
+  --sidebar-accent-foreground: #0F0F0F;
+  --sidebar-border: oklch(0.2 0 0);
+  --sidebar-ring: #D4AF37;
 }
 
 @layer base {
@@ -134,24 +152,11 @@
 }
 
 @layer components {
-  /**
-   * Custom container utility that centers content and adds responsive padding.
-   *
-   * This overrides Tailwind's default container behavior to:
-   * - Auto-center content (mx-auto)
-   * - Add responsive horizontal padding
-   * - Set max-width for large screens
-   *
-   * Usage: <div className="container">...</div>
-   *
-   * For custom widths, use max-w-* utilities directly:
-   * <div className="max-w-6xl mx-auto px-4">...</div>
-   */
   .container {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem; /* 16px - mobile padding */
+    padding-left: 1rem;
     padding-right: 1rem;
   }
 
@@ -162,16 +167,92 @@
 
   @media (min-width: 640px) {
     .container {
-      padding-left: 1.5rem; /* 24px - tablet padding */
+      padding-left: 1.5rem;
       padding-right: 1.5rem;
     }
   }
 
   @media (min-width: 1024px) {
     .container {
-      padding-left: 2rem; /* 32px - desktop padding */
+      padding-left: 2rem;
       padding-right: 2rem;
-      max-width: 1280px; /* Standard content width */
+      max-width: 1280px;
+    }
+  }
+
+  /* Russian aesthetic components */
+  .map-container {
+    @apply w-full h-screen rounded-lg overflow-hidden shadow-2xl;
+  }
+
+  .timeline-container {
+    @apply w-full bg-card rounded-lg border border-border shadow-lg p-4;
+  }
+
+  .event-marker {
+    @apply w-8 h-8 rounded-full border-2 border-accent cursor-pointer transition-all duration-200 hover:scale-125;
+  }
+
+  .event-marker.active {
+    @apply bg-primary border-primary scale-150;
+  }
+
+  .bullet-comment {
+    @apply fixed text-white font-bold pointer-events-none;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  }
+
+  .glow-kremlin {
+    box-shadow: 0 0 20px rgba(139, 0, 0, 0.5), 0 0 40px rgba(139, 0, 0, 0.3);
+  }
+
+  .glow-gold {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.5), 0 0 40px rgba(212, 175, 55, 0.3);
+  }
+
+  .glow-blue {
+    box-shadow: 0 0 20px rgba(0, 57, 166, 0.5), 0 0 40px rgba(0, 57, 166, 0.3);
+  }
+
+  .gradient-kremlin {
+    background: linear-gradient(135deg, #8B0000 0%, #660000 100%);
+  }
+
+  .gradient-flag {
+    background: linear-gradient(90deg, #FFFFFF 0%, #0039A6 50%, #D52B1E 100%);
+  }
+
+  .gradient-gold {
+    background: linear-gradient(135deg, #D4AF37 0%, #C9A961 100%);
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      opacity: 1;
+      filter: drop-shadow(0 0 10px rgba(139, 0, 0, 0.5));
+    }
+    50% {
+      opacity: 0.7;
+      filter: drop-shadow(0 0 20px rgba(139, 0, 0, 0.8));
     }
   }
 }
